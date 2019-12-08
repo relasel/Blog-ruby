@@ -1,0 +1,15 @@
+<h1>Категории</h1>
+
+<hr>
+<div class="category">
+  <% @categories.each do |category| %>
+<tr>
+  <td><%= link_to category.name, category %></td>
+<td> <%= link_to '[удалить]', category_path(category),
+      method: :delete,
+      data: { confirm: 'Are you sure?' } %></td>
+      <br  /> <br  />
+</tr>
+<% end %>
+</div>
+<p class="link"><%=link_to "Новая категория", new_category_path %></p>

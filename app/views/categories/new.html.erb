@@ -1,0 +1,13 @@
+<h1>Добавить категорию</h1>
+
+<%= form_for @category do |f| %>
+
+  <p>
+    <%= f.label "Категория" %> </br>
+  <%= f.text_field :name %> </br>
+</p>
+<p>
+  <%= f.submit "Добавить категорию" %>
+</p>
+
+<%end%>

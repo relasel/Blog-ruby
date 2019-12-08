@@ -1,0 +1,23 @@
+<h1> Создайте свой пост </h1>
+
+<%= form_for @post do |f| %>
+
+  <p>
+    <%= f.label "Тема" %> </br>
+  <%= f.text_field :title %> </br>
+</p>
+
+<p>
+<%= f.label "Текст" %> </br>
+<%= f.text_area :body %> </br>
+</p>
+
+<p>
+  <%= f.select :category_id, Category.all.collect { |x| [x.name, x.id]}, {:include_blank => "Выбрать категорию"} %>
+</p>
+
+ </br>
+<p>
+  <%= f.submit "Добавить пост" %>
+</p>
+<% end %>

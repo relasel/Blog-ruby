@@ -1,0 +1,10 @@
+<h1> <%=@title%> </h1>
+
+<%  if @posts.each do |post| %>
+<h2><%= link_to post.title, post%> </h2>
+<p> <%= post.body%> </p>
+<hr>
+<% end.empty? %>
+  <h2> Извините, но пока нет постов в этой категории :(</h2>
+
+<%end%>

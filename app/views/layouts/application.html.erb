@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog2</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+
+  <body>
+    <header><div>
+      <div class="header">
+        <div class="header_section">
+           <div class="header_item headerlogo">
+             <h1><%=link_to "БЛОГ НИ О ЧЕМ.", root_path%></h1>
+          </div>
+
+           <div class="header_item headerButton"><%= link_to "О БЛОГЕ", about_path %></div>
+           <div class="header_item headerButton"><%= link_to "ПОСТЫ", posts_path %></div>
+           <div class="header_item headerButton"><%= link_to "КАТЕГОРИИ", categories_path%></div>
+           <div class="header_item headerButton"><%= link_to "КОНТАКТЫ", contact_path%></div>
+           </div>
+          </header>
+    <%= yield %>
+  </body>
+</html>

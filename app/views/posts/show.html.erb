@@ -1,0 +1,10 @@
+<h1> <%= @post.title %> </h1>
+<hr>
+<p> <%= @post.body %> </p>
+<hr>
+<p> <%= link_to @post.category.name, category_path(:id => @post.category.id) %> </p>
+
+<small> <%= @post.created_at.strftime("%b %d. %Y") %> </small> <br>
+
+<span class="link"><%= link_to "РЕДАКТИРОВАТЬ", edit_post_path %> </span> <br>
+<span class="link"><%= link_to "УДАЛИТЬ", @post, :confirm => "Are you sure you want to delete?", :method => :delete %><span>
